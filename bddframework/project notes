@@ -1,0 +1,15 @@
+project notes:
+
+frame note
+---structure or guidelines or rules to build something
+---not just one project,a lot things integrated ,easier to communicate
+
+types
+1.TDD>> test driven development
+2.BDD>> behavior driven development
+
+bdd also called as cucumber framework,and given when then (GWT)
+
+gherkins language - simple english type language
+using to capture the requirements
+
