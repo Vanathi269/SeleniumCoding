@@ -1,0 +1,52 @@
+DATA PROVIDERS:
+	The DataProviders in TestNG are another way to pass the parameters in the test function.
+	DataProviders pass different values to the TestNG Test Case in a single execution and in the form of TestNG Annotations.
+	
+	SYNTAX:
+		@DataProvider (name = "name_of_dataprovider")
+		public void method_name() {
+    		BODY OF THE METHOD
+    		}
+    		
+Types of TestNG Listeners
+	-Listeners are implemented in code via interfaces to modify TestNG behaviour. 
+	-Listed below are the most commonly used TestNG listeners:
+
+-IAnnotationTransformer
+	IAnnotationTransformer is an interface that provides a method
+	 “transform” which would get invoked by TestNG to modify the behaviour of Test annotation method in our test class.
+-IExecutionListener
+	 IExecutionListener is used to to monitor when a TestNG run starts and ends.
+-IHookable
+	IHookable: If a class implements this interface, its run method will be invoked instead of each test method
+-IInvokedMethodListener
+	IInvokedMethodListener allows user to perform certain action before/after 
+	a method has been executed - something like clean up or setup. 
+-IMethodInterceptor
+	IMethodInterceptor is used to alter/modify the list of test methods to be executed by TestNG
+-IReporter
+	This listener helps to generate custom reports in TestNG, based on desired conditions
+-ISuiteListener
+	ISuiteListener is another type of listener provided in TestNG. The ISuiteListener works on the suite level.
+-ITestListener
+	ITestListener listens to the desired events and executes the methods accordingly.
+	
+	
+Retry logic on test case failure:
+	To retry a failed test, we will use the IRetryAnalyzer interface.
+	It reruns the Selenium TestNG tests when they are failed. If you work on a test automation project, 
+	you’d know that the most difficult part of automation is the analysis of test executions.
+	At the end of the execution, you need to analyze failed test cases and try to figure out if there’s any false 
+	positive/flaky situation caused by network glitch,time-out, or some other problem.
+	
+	SYNTAX:
+	public interface IRetryAnalyzer {
+
+  /**
+   * Returns true if the test method has to be retried, false otherwise.
+   *
+   * @param result The result of the test method that just ran.
+   * @return true if the test method has to be retried, false otherwise.
+   */
+  public boolean retry(ITestResult result);
+}

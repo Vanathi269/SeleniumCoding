@@ -1,0 +1,67 @@
+PRIORITY:
+	-Definition of Priority in TestNG test methods can only be the @Test methods.
+	-Lower the priority number; higher is the priority of the test case method.
+	-Priority in TestNG contains only integer value. The value can be negative, zero, or positive.
+	-One method is allowed to have only one priority in TestNG.
+	-Priority cannot pass through the XML files
+	
+	
+	SYNTAX:
+		@Test(priority=(number to execute the with priority)
+		public void method(){
+		body of the method
+		}
+		
+HOOK:
+	-hook is that even in case of test fail, after hook will execute for sure.
+	
+	
+	IMPLEMENTATION OF HOOK IN CUCUMBER:
+		Feature: Test Hooks
+
+		Scenario: This scenario is to test hooks functionality
+		Given this is the first step
+		When this is the second step
+		Then this is the third step
+		
+ASSERTION:
+	-Actual is the first parameter that describes the value that the user gets during the execution of the test script
+	 Assert is the Class provided by the TestNG framework. 
+	 methodName is the name of the method that can be used for implementing TestNG assertions. 
+	
+	
+	SYNTAX:
+		methodName(actual, expected);
+		
+TYPES OF ASSERTION:
+There are two types of TestNg Assert:
+
+Hard Assert
+Soft Assert
+	-Hard Assert in TestNG
+		Hard Asserts are those asserts that stop the test execution when an assert statement fails,
+		and the subsequent assert statements are therefore not validated.
+
+ 	 -Soft Assert in TestNG
+		Soft asserts are just the opposite of hard asserts.
+ 		In soft asserts, the subsequent assertions keep on running even though one assert validation fails,
+ANNOTATIONS:
+	–Used to describe the batch of code in a method
+	-Some of the annotations are and they are written in execution prior 
+		@test,
+		@Before method, 
+		@Before class, 
+		@Before test, 
+		@Before suite, 
+		@After method, 
+		@After class, 
+		@After test, 
+		@After suite
+		
+		SYNTAX:
+		
+		@ANNOTATION
+		public void method_name(){
+		body of the method
+		}
+	  	
