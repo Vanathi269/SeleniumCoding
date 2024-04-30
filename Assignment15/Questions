@@ -1,0 +1,58 @@
+1.How to Integrate TestNgXML with Maven ?
+Step 1: Select the POM.xml file from the Maven project. Right-click and select Maven => Add Plugin
+Step 2: Add the Plugin window will be displayed.
+To enter the Plugin details:
+
+1 Go to Google and Type Maven Surefire plugin.
+2 Click the link, maven.apache.org/surefire/maven-surefire-plugin and Select ‘Using TestNg’ link on the left pane of the window.
+3 Select the XML code that is displayed under the ‘Using Suite XML Files’ header.
+4 Enter the Group Id, Artifact Id and Version details in the Add Plugin Window using the below XML code snippet and click Ok.
+Step 3: On clicking the OK button, the Plugin is added in POM.xml file.
+Step 4: Copy the <Configuration> xml code snippet and add it to below the <version>tag.
+
+Step 5: Finally, the POM.xml code configuration looks as shown below.
+
+<build>
+     <plugins>
+                    <Plugin>
+                                 <groupId>org.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.20</version>
+          <configuration>
+          <suiteXmlFiles>
+          <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+          </configuration>
+                    </plugin>
+     </plugins>
+</build>
+
+2.How to run Testng Runner xml file using command prompt 
+
+Step 1 − Create different testing classes having different @Test methods
+
+Step 2 − Compile the class; it will create an out folder in IntelliJ and bin folder in Eclipse.
+
+Step 3 − Place all the jar files in the lib folder.
+
+Step 4 − Now create the testng.xml as given below.
+
+Step 5 − Open the cmd.
+
+Step 6 − Navigate to the project path using cd <project_path>
+
+Step 7 − Run the following command−
+
+java -cp <path of lib>; <path of out or bin folder>
+org.testng.TestNG <path of testng>/testng.xml
+
+3.What is the Timeout Test in TestNg?
+
+The timeOut is a helper attribute in TestNG that can put an end to the execution of a test method if that method takes time beyond the timeOut duration.
+ A timeOut time is set in milliseconds, after that the test method will be marked Failed.
+ 
+4.How many types of dependencies can you achieve by using TestNG?
+ TestNG allows you to specify dependencies in the following two ways:
+
+Using attributes dependsOnMethods in @Test annotations
+Using attributes dependsOnGroups in @Test annotations.

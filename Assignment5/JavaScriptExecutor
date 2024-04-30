@@ -1,0 +1,8 @@
+Why do we use JavaScript Executor .
+JavascriptExecutor is an interface that is used to execute JavaScript with Selenium. 
+To simplify the usage of JavascriptExecutor in Selenium, 
+think of it as a medium that enables the WebDriver to interact with HTML elements within the browser.
+
+To get innertext of the entire webpage in Selenium using JavaScriptExecutor
+To get innertext of the entire webpage:
+String sText = js. executeScript(“return document. documentElement. innerText;”).

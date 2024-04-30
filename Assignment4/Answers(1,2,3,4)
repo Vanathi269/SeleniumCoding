@@ -1,0 +1,22 @@
+1.How to check if element is hidden in Selenium ?
+	isDisplayed()
+		The isDisplayed method in Selenium verifies if a certain element is present and displayed. 
+		If the element is displayed, then the value returned is true. If not, then the value returned is false.
+
+2.How to get text from hidden elements in Selenium ?
+	---javascriptexecutor is used		
+	WebElement hiddenDiv = seleniumDriver. findElement(By.id("hidden_div"));
+	 String n = hiddenDiv. getText(); 
+	// does not work (returns "" as expected) String script = "return arguments[0]. innerText"; 
+	n = (String) ((JavascriptExecutor) driver).executeScript(script, hiddenDiv);
+	
+3.How to click on hidden checkbox in Selenium ?
+	The rational is that if a person cannot perform that action, then neither should Selenium. 
+	Therefore, to perform the click via Selenium, you must perform the action a user would do to make that button visible 
+	(e.g mouse over event, click another element, etc) then perform the click once visible.
+	
+4.How you can identify hidden elements ?
+	The hidden elements are the ones which are present in the DOM but not visible on the page. 
+	Mostly the hidden elements are defined by the CSS property style="display:none;". 
+	In case an element is a part of the form tag, it can be hidden by setting the attribute type to the value hidden.
+	

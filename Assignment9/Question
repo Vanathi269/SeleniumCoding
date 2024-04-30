@@ -1,0 +1,32 @@
+1. What are commonly used TestNG annotations ?
+	BeforeSuite
+	BeforeTest
+	BeforeClass
+	BeforeMethod
+	Test Case
+	AfterMethod
+	AfterClass
+	AfterTest	
+	AfterSuite
+	
+2. How to set test case priority in TestNG ?
+	Priority in TestNG
+	Thus, test cases with lower priority get executed first. One test method is allowed to have only one test priority in TestNG. 
+	If test priority is not defined explicitly while running multiple cases, 
+	TestNG assigns all cases with a Default test priority, i.e., zero (0).
+	
+3. What is default value for the TestNG Priority ------>zero (0)
+
+4. How to run a group of test cases using TestNG ?	
+	You can specify your Groups using the tag in your testng.xml file, under the or tag. 
+	To run a group of test cases, you can invoke those methods that belong to groups or specify groups that contain other groups.
+	
+5.What are some common assertions provided by TestNG ?
+	#1) assertEquals.
+	#2) assertTrue.
+	#3) assertFalse.
+	#4) assertNull.
+	#5) assertNotNull.
+	#6) assertSame.
+	#7) assertNotSame.
+	#8) assertArrayEquals.

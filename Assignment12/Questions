@@ -1,0 +1,36 @@
+1.Why do we use Listener?
+	Listener is defined as interface that modifies the default TestNG's behavior. 
+	As the name suggests Listeners “listen” to the event defined in the selenium script and behave accordingly. 
+	It is used in selenium by implementing Listeners Interface. It allows customizing TestNG reports or logs.
+
+2.What are the type of Listener in TestNg ?
+-Listeners are implemented in code via interfaces to modify TestNG behaviour. 
+	-Listed below are the most commonly used TestNG listeners:
+
+-IAnnotationTransformer
+	IAnnotationTransformer is an interface that provides a method
+	 “transform” which would get invoked by TestNG to modify the behaviour of Test annotation method in our test class.
+-IExecutionListener
+	 IExecutionListener is used to to monitor when a TestNG run starts and ends.
+-IHookable
+	IHookable: If a class implements this interface, its run method will be invoked instead of each test method
+-IInvokedMethodListener
+	IInvokedMethodListener allows user to perform certain action before/after 
+	a method has been executed - something like clean up or setup. 
+-IMethodInterceptor
+	IMethodInterceptor is used to alter/modify the list of test methods to be executed by TestNG
+-IReporter
+	This listener helps to generate custom reports in TestNG, based on desired conditions
+-ISuiteListener
+	ISuiteListener is another type of listener provided in TestNG. The ISuiteListener works on the suite level.
+-ITestListener
+	ITestListener listens to the desired events and executes the methods accordingly.
+	
+3.Write steps to implement TestNg listener ?
+	 Write the business logic of your test and insert TestNG annotations in your code. Add the information about your test 
+	 (e.g. the class name, the groups you wish to run, etc...) in a testng.xml file or in build.xml. Run TestNG.
+	 
+4.How to re-run TestNgFailed Tests using Auto Retry mechanism ?
+	After the first run of an automated test run. Right click on Project – Click on Refresh.
+	A folder will be generated named “test-output” folder. Inside “test-output” folder, you could find “testng-failed. xml”
+	Run “testng-failed. xml” to execute the failed test cases again.

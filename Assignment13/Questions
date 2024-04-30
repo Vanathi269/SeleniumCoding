@@ -1,0 +1,32 @@
+1. What are the advantages of TestNG?
+	TestNG makes automated tests more structured, readable, maintainable, and user-friendly. 
+	It provides powerful features and reporting. Its high-end annotations like dataprovider, 
+	makes it easier to scale up, as you perform cross browser testing across multiple devices, browsers, and their versions.
+	
+2.<Suite>,<test>,<classes>,<class>
+
+3.What is the importance oftestng.xmlfile?
+	TestNG. xml file is an XML file which contains all the Test configuration and this XML file can be used to run and organize our test. 
+	TestNG eclipse plugin can be used to automatically generate testng. xml file so no need to write from scratch.
+	
+4.How to pass parameter throughtestng.xmlfile to a test case?
+	Create a java test class, say, ParameterizedTest1. java.
+	Add test method parameterTest() to your test class. This method takes a string as input parameter.
+	Add the annotation @Parameters("myName") to this method. The parameter would be passed a value from testng.
+	
+5.How to exclude a particular test method from a test case execution?
+	You can disable or exclude the test cases by using the enable attribute to the @Test annotation and assign False value to the enable attribute.
+	
+6.How to write regular expression In testng.xml file to search@Test methods containing “smoke” keyword?
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testSuite">
+<test name="test"> <classes>
+<class name="sample">
+<methods>
+<exclude name="smoke.*"/>
+</methods>
+</class>
+</classes>
+</test>
+</suite>

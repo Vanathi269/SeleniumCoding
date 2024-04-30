@@ -1,0 +1,25 @@
+1.How to get url of webpage using javaScript
+If you're using JavaScript in the browser you can get the full current URL by using window.location.href
+
+
+2.Write down the step to take screenshot on Scenario failure ?
+	Create a class. Implement TestNG ‘ITestListener‘.
+	Call the method ‘onTestFailure’.
+	Add the code to take a screenshot with this method.
+	Get the Test method name and take a screenshot with the test name. Then place it in the desired destination folder.
+	
+4.How to take a screenshot of the full page in Selenium?
+To capture screenshots in Selenium, one has to utilize the method TakesScreenshot. This notifies WebDriver that it should take a screenshot in Selenium and store it.
+
+Syntax:
+
+File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+String screenshotBase64 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
+OutputType defines the output type for the required screenshot in the above snippet.
+
+If the user intends to take screenshot in Selenium and store it in a designated location, the method is getScreenshotAs.
+
+
+5.How to take a screenshot of a particular element in Selenium?
+	Just pass the Webelement name and your file name in your generic “elementScreenshot” method. This will take three screenshots together. 
+	For the Target file in which you want to copy your source file, you can also give any path to store your screenshot.

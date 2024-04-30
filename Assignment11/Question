@@ -1,0 +1,19 @@
+1.How can we create a data-driven framework using TestNG ?
+	 Step 1: Go to the Eclipse IDE and create a project. Add all the dependencies for TestNG, Selenium and Apache POI. 
+	 Step 2: Create a class file to write the functionality.
+	 
+2.What is the difference between DataProvider and parameters in TestNG ?
+	DataProviders pass the different parameters on a single test in a single execution, 
+	whereas parameters pass the parameters just once per execution in TestNG.
+	
+3.Can we use DataProvider in BeforeTest ?
+	It is not possible to use data providers with @BeforeTest (and maybe any other @BeforeX methods), 
+	but you can use a before @Test method, where all other @Test methods are dependent ( dependsOnMethods ): 
+	@Test(dataProvider="dp") public void beforeTest(<params...>)
+	
+4.What are the four main objects of data provider 
+	Connection--->	It is used to establish a connection to a specific data source.
+	Command--->	It is used to execute queries to perform database operations.
+	DataReader--->	It is used to read data from data source. The DbDataReader is a base class for all DataReader objects.
+	DataAdapter--->	It populates a DataSet and resolves updates with the data source. The base class for all DataAdapter objects is the DbDataAdapter class.
+	

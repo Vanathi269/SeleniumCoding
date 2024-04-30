@@ -1,0 +1,27 @@
+1. Mention the three-build lifecycle of Maven ?
+	There are three built-in build lifecycles: default, clean and site. 
+	The default lifecycle handles your project deployment, 
+	The clean lifecycle handles project cleaning, 
+	while the site lifecycle handles the creation of your project's web site.
+	
+2. Explain what is Maven artifact ?
+	In Maven terminology, an artifact is an output generated after a Maven project build. 
+	It can be, for example, a jar, war, or any other executable file. 
+	Also, Maven artifacts include five key elements, groupId, artifactId, version, packaging, and classifier.
+	
+3. List out the dependency scope in Maven ?
+	Maven distinguishes six dependency scopes: compile, runtime, test, provided, system and import.
+
+4. Write the command to perform a force update in Maven ?
+	We can force update in maven by using –U options by using mvn clean install command. 
+	In that –U means force update the dependencies of the snapshot.
+	
+5. What are the different types of profile in Maven? Where will you define these profiles?
+	Per project---------> pom.xml
+	Per User/Developer-------> Maven settings.xml 
+	Global-----------> Maven global settings.xml 
+	
+6. How will you run test classes in Maven ?
+	The Maven surefire plugin provides a test parameter that we can use to specify test classes or methods we want to execute. 
+	If we want to execute a single test class, we can execute the command mvn test -Dtest=”TestClassName”. 
+	As the output shows, only the test class we've passed to the test parameter is executed.

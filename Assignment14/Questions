@@ -1,0 +1,28 @@
+1.How to Run TestNG Using Command Prompt?
+Step 1 − Create different testing classes having different @Test methods
+
+Step 2 − Compile the class; it will create an out folder in IntelliJ and bin folder in Eclipse.
+
+Step 3 − Place all the jar files in the lib folder.
+
+Step 4 − Now create the testng.xml as given below.
+
+Step 5 − Open the cmd.
+
+Step 6 − Navigate to the project path using cd <project_path>
+
+Step 7 − Run the command−
+java -cp <path of lib>; <path of out or bin folder>
+org.testng.TestNG <path of testng>/testng.xml
+
+2. How to disable a test case in TestNG ?
+Sometimes, it happens that our code is not ready and the test case written to test that method/code fails. 
+In such cases, annotation @Test(enabled = false) helps to disable this test case.
+
+3.How can we run test cases in parallel using TestNG ?
+TestNG helps to run test methods/classes/tests in parallel. Using the testng. xml file, one can specify parallel attributes to classes, tests, and methods. 
+Java's multi-thread feature can also be applied by defining the number of threads for parallel testing in the thread attribute.
+
+4. How to run a group of test cases using TestNG?
+To group tests in the source code, you have to use the @groups attribute of the @Test annotation. TestNG provides the option to structure the test 
+such that the entire test class belongs to a particular TestNG group or a couple of methods belong to the TestNG group.

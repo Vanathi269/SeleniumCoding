@@ -1,0 +1,21 @@
+1. What is the difference between @BeforeTest and @BeforeMethod annotation ?
+	@BeforeMethod is invoked before each method with a @Test annotation. @BeforeTest is invoked before a <test> tag.
+	
+2. Mention the TestNg annotations execution sequence ?
+	1.@BeforeSuite.
+	2.@BeforeTest.
+	3.@BeforeClass.
+	4.@BeforeMethod.
+	5.@Test.
+	6.@AfterMethod.
+	7.@AfterClass.
+	8.@AfterTest.
+	
+3. Difference between Hard assert and soft assert in TestNg ?
+	Hard Asserts are used when you want to halt the execution of the test script (or test method) when the assert condition 
+	does not match with the expected result. 
+	Soft Asserts are used when the test script (or test method) need not be halted when the assertion condition does not meet the expected result.
+	
+4. How to write soft assertion in TestNg ?
+	Soft Assert does not throw an exception when an assert fails and would continue with the next step after the assert statement. 
+	If there is any exception and you want to throw it then you need to use assertAll() method as a last statement in the @Test and test suite again continue with next @Test as it is.
